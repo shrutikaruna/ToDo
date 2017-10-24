@@ -1,0 +1,27 @@
+{
+  "name": "shruti",
+  "version": "1.0.0",
+  "description": "Demostarte express in class",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "author": "shruti",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "glob": "^7.1.2",
+    "grunt": "^1.0.1",
+    "jshint-stylish": "^2.2.1",
+    "mongoose": "^4.12.4",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "shruti",
+  "version": "1.0.0",
+  "description": "Demostarte express in class",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "author": "shruti",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.5",
+    "grunt": "^1.0.1",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0"
+  }
+}
