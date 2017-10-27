@@ -1,8 +1,10 @@
 var express = require('express'),
 router = express.Router(),
 logger = require('../../config/logger'),
+
 mongoose = require('mongoose'),
 User = mongoose.model('Users');
+
 
 module.exports = function (app, config) {
 app.use('/api', router);
@@ -14,11 +16,11 @@ router.get('/users', function (req, res, next){
    .sort(req.query.order)
    .exec()
    .then(result => {
-        if(result && result.length) {
-              res.status(200).json(result);
-        } else {
-              res.status(404).json({message: "No users"});
-        }
+      if(result && result.length) {
+        res.status(200).json(result);
+    } else {
+        res.status(404).json({message: "No users"});
+    }
    })
    .catch(err => {
      return next(err);
@@ -40,6 +42,7 @@ router.get('/users/:userId', function (req, res, next){
                    return next(error);
                });
        });    
+
 router.post('/users', function(req, res, next){
     logger.log('Create user', 'verbose');
 
@@ -78,7 +81,7 @@ router.delete('/users/:userId', function (req, res, next){
            });
    });
 
-   router.post('/login', function(req, res, next){
+router.post('/login', function(req, res, next){
     console.log(req.body);
     var email = req.body.email;
     var password = req.body.password;
@@ -88,3 +91,5 @@ router.delete('/users/:userId', function (req, res, next){
 });
 
 };
+
+

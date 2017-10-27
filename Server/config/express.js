@@ -12,8 +12,8 @@ module.exports = function (app, config) {
       mongoose.connect(config.db, {useMongoClient: true});
       var db = mongoose.connection;
       db.on('error', function () {
-               throw new Error('unable to connect to database at ' + config.db);
-      });
+              throw new Error('unable to connect to database at ' + config.db);
+       });
 
   if(process.env.NODE_ENV !== 'test') {
         app.use (morgan('dev'));
@@ -43,10 +43,12 @@ module.exports = function (app, config) {
                           require(controller)(app,config);
                         });
 
-          var users = [ {name: 'John', email: 'woo@hoo.com'},
+
+
+  var users = [ {name: 'John', email: 'woo@hoo.com'},
                 {name: 'Betty', email: 'loo@woo.com'},
                 {name: 'Hal', email: 'boo@woo.com'}
-          ];
+  ];
 
 app.get ('/api/users', function(req, res){
 res.status(200).json(users);

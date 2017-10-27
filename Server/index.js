@@ -11,4 +11,4 @@ require('http').createServer(app).listen(config.port, function(){
 
 });
 
-module.experts = app;
+module.exports = app;
