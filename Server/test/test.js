@@ -37,7 +37,7 @@ chai.request(server)
 	});
 });
 
-
+/*
 it('it should not POST a user without email field', (done) => {
 	var user = {
     	"firstName": "Jane",
@@ -268,6 +268,7 @@ it('it should DELETE a todo given the id', (done) => {
 
 //});
 
+*/
 describe('Test', function() {
 	
 it('it should GET the index.html file', (done) => {
@@ -287,5 +288,7 @@ it('it should return 404', (done) => {
 	   res.should.have.status(404);
 	   done();
 	   });
-    });
+	});
+
 });
+
