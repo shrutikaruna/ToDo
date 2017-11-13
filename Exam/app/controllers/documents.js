@@ -1,5 +1,5 @@
 var express = require('express'),
-router = express.Router(),  // Router object managesroutes
+router = express.Router(),  // Router object manages routes
 mongoose = require('mongoose'),
 Newdocument = mongoose.model('docs');
 
@@ -9,7 +9,7 @@ app.use('/api', router);
 // Declares the router as an Express middleware and set the default URL prefix to /api
 
 // retrives the values from the object
-router.get('/documents', function (req, res, next){
+router.get('/docs', function (req, res, next){
     console.log('Get all documents', 'verbose');
 
    var query = Newdocument.find()
@@ -27,7 +27,7 @@ router.get('/documents', function (req, res, next){
 });
 
 // creates an object and saves it to the newdoc variable.
-router.post('/documents', function(req, res, next){
+router.post('/docs', function(req, res, next){
     console.log('Create a document', 'verbose');
    var newdoc = new Newdocument(req.body);
     newdoc.save()
