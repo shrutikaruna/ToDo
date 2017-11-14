@@ -7,8 +7,6 @@ export class DataServices {
 	constructor(http) {
 		this.httpClient = http;
         this.BASE_URL = "http://localhost:5000/api/";
-        // put correct URL 
-    
         this.httpClient.configure(config => {
             config
                 .withBaseUrl(this.BASE_URL)
@@ -83,9 +81,7 @@ export class DataServices {
 			.catch(error => {
 				return error ;
 			});
-	}
-
-    
-    }
+}
 
 }
+
