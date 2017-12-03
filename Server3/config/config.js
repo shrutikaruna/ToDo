@@ -25,6 +25,7 @@ var config = {
         app: { name: 'ToDos'},
         port: 80,
         db: 'mongodb://127.0.0.1/todo',
+        uploads: rootPath + "/public/uploads/",
         secret: 'cayennedlikedhistreats'
      }
     };

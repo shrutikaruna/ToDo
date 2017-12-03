@@ -33,10 +33,10 @@ module.exports = function (app, config) {
       next();
     });  
   }
-  app.use(bodyparser.json());
-  app.use(bodyparser.urlencoded({
-  extended: true
-  }));
+  app.use(bodyParser.json({limit: '1000mb'}));
+  app.use(bodyParser.urlencoded({limit: '1000mb', extended: true}));
+
+
   //require ('../app/controllers/users')(app, config)
           var models = glob.sync(config.root + '/app/models/*.js');
           models.forEach(function (model) {
