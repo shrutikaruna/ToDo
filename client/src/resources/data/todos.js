@@ -9,6 +9,16 @@ export class ToDos {
                 this.todosArray= new Array ();
          }
 
+
+ async uploadFile(files, userId, todoId){
+            let formData = new FormData();
+            files.forEach((item, index) => {
+                formData.append("file" + index, item);
+                });        
+            let response = await this.data.uploadFiles(formData, this.TODO_SERVICE + "/upload/" + userId + "/" + todoId);
+            return response;
+            }
+            
 async getUserTodos(id){
     let response = await this.data.get(this.TODO_SERVICE + "/user/" + id);
     if(!response.error && !response.message){
@@ -46,14 +56,6 @@ async deleteTodo(id){
         }
     }
 
-async uploadFile(files, userId, todoId){
-    let formData = new FormData();
-    files.forEach((item, index) => {
-        formData.append("file" + index, item);
-        });
-            
-    let response = await this.data.uploadFiles(formData, this.TODO_SERVICE + "/upload/" + userId + "/" + todoId);
-    return response;
-    }
+
             
 }

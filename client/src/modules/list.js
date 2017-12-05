@@ -72,7 +72,17 @@ changeFiles(){
     removeFile(index){
     this.filesToUpload.splice(index,1);
     }
-                        
+    
+// UploadPhotos()
+// {
+//     this.filesToUpload = new Array(); 
+//     this.filesToUpload.push(this.files[0]);
+//         }
+//     removeFile(index){
+//     this.filesToUpload.splice(index,1);
+// }     
+
+
 back(){
     this.showList=true;
 }

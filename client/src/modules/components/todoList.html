@@ -6,7 +6,7 @@
         <span class="col">
             <div class="form-check">
                 <label class="form-check-label">
-                    <input change.trigger="toggleShowCompleted()" type="checkbox" class="form-check-input"> Show completed
+                   <input change.trigger="toggleShowCompleted()" type="checkbox" class="form-check-input"> Show completed
                 </label>
            </div>
         </span>
@@ -34,7 +34,7 @@
         <td>${todo.todo}</td>
         <td>${todo.dateDue | dateFormat}</td>
         <td>${todo.priority}</td>
-        <!-- <td><a href="uploads/${user._id}/${todo.file.filename}" target="_blank">${todo.file.originalName}</a></td> -->
+        <!-- <td><a href="uploads/${user._id}/${todo.file.fileName}" target="_blank">${todo.file.originalName}</a></td> -->
         <td><a href="http://localhost:5000/uploads/${user._id}/${todo.file.filename}" 	target="_blank">${todo.file.originalName}</a></td>
         <td>
         <i click.trigger="editTodo(todo)" class="fa fa-pencil rightMargin" aria-hidden="true"></i>
@@ -47,7 +47,7 @@
 </table>
     </div>
 <div show.bind="!todos.todosArray.length">
-    <h2>Apparently, you don't have anything to do!</h2>
+    <h2>You dont have anything to do for now!</h2>
     </div>
     </div>
      </div>

@@ -31,7 +31,7 @@ router.get('/users',requireAuth, function (req, res, next){
    });
 });
 
-router.get('/users/:userId',requireAuth, function (req, res, next){
+router.get('/users/:userId', function (req, res, next){
     logger.log('Get user'+ req.params.userId, 'verbose');
 
    User.findById(req.params.userId)
@@ -60,7 +60,7 @@ router.post('/users', function(req, res, next){
    });
  });
  
- router.put('/users/password/:userId',requireAuth, function(req, res, next){
+ router.put('/users/password/:userId', function(req, res, next){
 	logger.log('Update user ' + req.params.userId, 'verbose');
 
 	User.findById(req.params.userId)
@@ -83,7 +83,7 @@ router.post('/users', function(req, res, next){
 		});
 });
 
-router.put('/users/:userId',requireAuth, function (req, res, next){
+router.put('/users/:userId', function (req, res, next){
     logger.log('Update user'+ req.params.userId, 'verbose');
 
        User.findOneAndUpdate({_id: req.params.userId}, 		
@@ -96,7 +96,7 @@ router.put('/users/:userId',requireAuth, function (req, res, next){
            });
    });  
 
-router.delete('/users/:userId', requireAuth, function (req, res, next){
+router.delete('/users/:userId', function (req, res, next){
     logger.log('Delete user'+ req.params.userId, 'verbose');
 
    User.remove({ _id: req.params.userId })
@@ -119,5 +119,3 @@ router.delete('/users/:userId', requireAuth, function (req, res, next){
 router.route('/users/login').post(requireLogin, login);
 
 };
-
-

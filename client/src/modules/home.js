@@ -36,7 +36,7 @@ async save() {
             this.registerError = "There was a problem registering the user."
       }
 }
-        
+ 
 login(){
     return this.auth.login(this.email, this.password)
     .then(response => {

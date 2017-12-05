@@ -1,9 +1,13 @@
 <template>
-            First Name: <input value.bind="user.firstName">
-            Last Name: <input value.bind="user.lastName">
-            Email: <input value.bind="user.email">
+
+        <label for="user.firstName">First Name:</label>  
+        <input value.bind="user.firstName">
+        <label for="user.lastName">Last Name:</label>
+         <input value.bind="user.lastName">
+        <label for="user.email">Email:</label>
+         <input value.bind="user.email">
             Password: <input value.bind="user.password">
-        <span>$Message</span>
+        <span>Message: </span>
         <button click.trigger="save()">Save</button>
     </template>
     
